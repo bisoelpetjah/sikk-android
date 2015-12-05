@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SIKK</string>
+
+    <string name="drawer_beranda">Beranda</string>
+    <string name="drawer_kasus">Kasus</string>
+    <string name="drawer_pelaku">Pelaku</string>
+</resources>

@@ -1,1 +1,1 @@
-# sikk-android
+# Sistem Informasi Kasus Korupsi for Android
