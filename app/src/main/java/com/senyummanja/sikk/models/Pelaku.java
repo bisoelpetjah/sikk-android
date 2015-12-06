@@ -5,4 +5,7 @@ package com.senyummanja.sikk.models;
  */
 public class Pelaku {
     public String nama = "";
+    public String foto = "";
+    public String jabatan = "";
+    public long nilai = 0;
 }

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
+    android:layout_height="wrap_content" app:cardUseCompatPadding="true">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/nilai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:maxLines="1"
+            android:textColor="@color/bg_toolbar"
+            android:textStyle="bold"/>
+
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:layout_margin="5dp"
+            android:layout_below="@id/nilai"
+            android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/nama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/foto"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:lines="2"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:gravity="center|top"/>
+
+        <TextView
+            android:id="@+id/jabatan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/nama"
+            android:textSize="12sp"
+            android:lines="2"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:gravity="center|top"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
