@@ -146,6 +146,7 @@
                 android:textStyle="bold"/>
 
         </LinearLayout>
+
         <View
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -179,6 +180,7 @@
     </LinearLayout>
 
     <android.support.design.widget.FloatingActionButton
+        android:id="@+id/addSticker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"

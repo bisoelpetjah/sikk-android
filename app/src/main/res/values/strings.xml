@@ -18,4 +18,6 @@
     </array>
 
     <string name="label_jabatan">Jabatan:</string>
+    <string name="dialog_add_sticker">Kirim stiker</string>
+    <string name="dialog_cancel">Batal</string>
 </resources>
