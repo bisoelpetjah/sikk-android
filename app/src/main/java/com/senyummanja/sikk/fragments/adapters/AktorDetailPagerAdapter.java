@@ -8,6 +8,7 @@ import android.support.v4.app.FragmentStatePagerAdapter;
 import com.senyummanja.sikk.R;
 import com.senyummanja.sikk.fragments.AktorInfoFragment_;
 import com.senyummanja.sikk.fragments.AktorKasusFragment_;
+import com.senyummanja.sikk.fragments.AktorStikerFragment_;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,7 +27,7 @@ public class AktorDetailPagerAdapter extends FragmentStatePagerAdapter {
 
         fragments.add(AktorInfoFragment_.builder().build());
         fragments.add(AktorKasusFragment_.builder().build());
-        fragments.add(AktorInfoFragment_.builder().build());
+        fragments.add(AktorStikerFragment_.builder().build());
     }
 
     @Override
