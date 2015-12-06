@@ -72,7 +72,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 drawerLayout.closeDrawers();
                 return true;
             }
-            case R.id.drawer_pelaku: {
+            case R.id.drawer_aktor: {
                 assignFragment(AktorFragment_.builder().build());
                 getSupportActionBar().setTitle(R.string.drawer_aktor);
                 drawerLayout.closeDrawers();

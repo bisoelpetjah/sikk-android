@@ -80,6 +80,15 @@
                     android:textColor="@color/bg_toolbar"
                     android:background="@drawable/bg_chip"/>
 
+                <ImageButton
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_below="@id/aktor"
+                    android:layout_alignParentRight="true"
+                    android:padding="10dp"
+                    android:background="@drawable/sel_bg_button"
+                    android:src="@drawable/ic_watch"/>
+
             </RelativeLayout>
 
             <android.support.v7.widget.Toolbar
