@@ -1,5 +1,7 @@
 package com.senyummanja.sikk;
 
+import android.graphics.Color;
+import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
@@ -14,6 +16,9 @@ import org.androidannotations.annotations.ViewById;
 @EActivity(R.layout.activity_detail_kasus)
 public class KasusDetailActivity extends AppCompatActivity {
 
+    @ViewById(R.id.collapsingToolbar)
+    protected CollapsingToolbarLayout collapsingToolbarLayout;
+
     @ViewById(R.id.toolbar)
     protected Toolbar toolbar;
 
@@ -22,6 +27,8 @@ public class KasusDetailActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Kasus Papa Minta Saham");
+
+        collapsingToolbarLayout.setExpandedTitleColor(Color.TRANSPARENT);
 
         toolbar.setNavigationOnClickListener(new View.OnClickListener() {
             @Override
