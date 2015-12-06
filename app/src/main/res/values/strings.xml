@@ -8,6 +8,14 @@
     <string name="drawer_kasus">Kasus</string>
     <string name="drawer_aktor">Aktor</string>
 
-    <string name="label_nilai_total">Nilai total: </string>
+    <string name="label_nilai_total">Nilai total:</string>
     <string name="label_aktor">Aktor:</string>
+
+    <array name="aktor_detail_tab_titles">
+        <item>INFORMASI</item>
+        <item>KASUS</item>
+        <item>STIKER</item>
+    </array>
+
+    <string name="label_jabatan">Jabatan:</string>
 </resources>

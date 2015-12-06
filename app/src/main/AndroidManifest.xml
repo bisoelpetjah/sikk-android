@@ -24,6 +24,8 @@
 
         <activity android:name=".KasusDetailActivity_" android:launchMode="singleTop"/>
 
+        <activity android:name=".AktorDetailActivity_" android:launchMode="singleTop"/>
+
     </application>
 
 </manifest>

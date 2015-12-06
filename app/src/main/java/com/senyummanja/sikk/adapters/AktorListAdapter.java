@@ -17,6 +17,8 @@ public class AktorListAdapter extends RecyclerView.Adapter<AktorListAdapter.Akto
 
     public List<Aktor> aktorList = new ArrayList<>();
 
+    private AktorListItemView.OnItemClickListener onItemClickListener;
+
     @Override
     public int getItemCount() {
         return aktorList.size();
@@ -25,12 +27,17 @@ public class AktorListAdapter extends RecyclerView.Adapter<AktorListAdapter.Akto
     @Override
     public AktorListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         AktorListItemView itemView = AktorListItemView_.build(parent.getContext());
+        itemView.setOnItemClickListener(onItemClickListener);
         return new AktorListViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(AktorListViewHolder holder, int position) {
-        holder.view.setPelaku(aktorList.get(position));
+        holder.view.setAktor(aktorList.get(position));
+    }
+
+    public void setOnItemClickListener(AktorListItemView.OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     public class AktorListViewHolder extends RecyclerView.ViewHolder {

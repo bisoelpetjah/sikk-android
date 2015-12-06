@@ -11,6 +11,7 @@ import com.senyummanja.sikk.R;
 import com.senyummanja.sikk.models.Aktor;
 import com.senyummanja.sikk.utils.RoundedDrawable;
 
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
@@ -32,6 +33,9 @@ public class AktorListItemView extends RelativeLayout {
     @ViewById(R.id.jabatan)
     protected TextView textViewJabatan;
 
+    private Aktor aktor;
+    private OnItemClickListener onItemClickListener;
+
     public AktorListItemView(Context context) {
         super(context);
     }
@@ -44,7 +48,14 @@ public class AktorListItemView extends RelativeLayout {
         super(context, attrs, defStyleAttr);
     }
 
-    public void setPelaku(Aktor aktor) {
+    @Click(R.id.button)
+    protected void itemClicked() {
+        if (onItemClickListener != null) onItemClickListener.onItemClick(aktor);
+    }
+
+    public void setAktor(Aktor aktor) {
+        this.aktor = aktor;
+
         if (aktor != null) {
             Glide.with(getContext())
                     .load(aktor.foto)
@@ -56,5 +67,13 @@ public class AktorListItemView extends RelativeLayout {
             textViewNama.setText(aktor.nama);
             textViewJabatan.setText(aktor.jabatan);
         }
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(Aktor aktor);
     }
 }

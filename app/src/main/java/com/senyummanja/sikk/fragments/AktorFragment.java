@@ -4,9 +4,11 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.GridLayoutManager;
 
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
+import com.senyummanja.sikk.AktorDetailActivity_;
 import com.senyummanja.sikk.R;
 import com.senyummanja.sikk.adapters.AktorListAdapter;
 import com.senyummanja.sikk.models.Aktor;
+import com.senyummanja.sikk.views.AktorListItemView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -16,7 +18,7 @@ import org.androidannotations.annotations.ViewById;
  * Created by irvan on 12/5/15.
  */
 @EFragment(R.layout.fragment_aktor)
-public class AktorFragment extends Fragment {
+public class AktorFragment extends Fragment implements AktorListItemView.OnItemClickListener {
 
     @ViewById(R.id.aktorList)
     protected SuperRecyclerView recyclerViewAktor;
@@ -25,13 +27,20 @@ public class AktorFragment extends Fragment {
 
     @AfterViews
     protected void initViews() {
+        adapter.setOnItemClickListener(this);
+
         recyclerViewAktor.setAdapter(adapter);
         recyclerViewAktor.setLayoutManager(new GridLayoutManager(getActivity(), 2));
 
-        performGetPelakuList();
+        performGetAktorList();
     }
 
-    private void performGetPelakuList() {
+    @Override
+    public void onItemClick(Aktor aktor) {
+        AktorDetailActivity_.intent(this).start();
+    }
+
+    private void performGetAktorList() {
         for (int i = 1; i <= 20; i++) {
             Aktor aktor = new Aktor();
             aktor.nama = "Muhammad Jesus";
