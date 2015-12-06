@@ -7,8 +7,8 @@ import com.malinskiy.superrecyclerview.SuperRecyclerView;
 import com.senyummanja.sikk.AktorDetailActivity_;
 import com.senyummanja.sikk.R;
 import com.senyummanja.sikk.adapters.AktorListAdapter;
+import com.senyummanja.sikk.interfaces.OnAktorItemClickListener;
 import com.senyummanja.sikk.models.Aktor;
-import com.senyummanja.sikk.views.AktorListItemView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -18,7 +18,7 @@ import org.androidannotations.annotations.ViewById;
  * Created by irvan on 12/5/15.
  */
 @EFragment(R.layout.fragment_aktor)
-public class AktorFragment extends Fragment implements AktorListItemView.OnItemClickListener {
+public class AktorFragment extends Fragment implements OnAktorItemClickListener {
 
     @ViewById(R.id.aktorList)
     protected SuperRecyclerView recyclerViewAktor;
@@ -27,7 +27,7 @@ public class AktorFragment extends Fragment implements AktorListItemView.OnItemC
 
     @AfterViews
     protected void initViews() {
-        adapter.setOnItemClickListener(this);
+        adapter.setOnAktorItemClickListener(this);
 
         recyclerViewAktor.setAdapter(adapter);
         recyclerViewAktor.setLayoutManager(new GridLayoutManager(getActivity(), 2));
@@ -36,7 +36,7 @@ public class AktorFragment extends Fragment implements AktorListItemView.OnItemC
     }
 
     @Override
-    public void onItemClick(Aktor aktor) {
+    public void onAktorItemClick(Aktor aktor) {
         AktorDetailActivity_.intent(this).start();
     }
 

@@ -3,6 +3,7 @@ package com.senyummanja.sikk.adapters;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
+import com.senyummanja.sikk.interfaces.OnKasusItemClickListener;
 import com.senyummanja.sikk.models.Kasus;
 import com.senyummanja.sikk.views.KasusListItemView;
 import com.senyummanja.sikk.views.KasusListItemView_;
@@ -17,7 +18,7 @@ public class KasusListAdapter extends RecyclerView.Adapter<KasusListAdapter.Kasu
 
     public List<Kasus> kasusList = new ArrayList<>();
 
-    private KasusListItemView.OnItemClickListener onItemClickListener;
+    private OnKasusItemClickListener onKasusItemClickListener;
 
     @Override
     public int getItemCount() {
@@ -27,7 +28,7 @@ public class KasusListAdapter extends RecyclerView.Adapter<KasusListAdapter.Kasu
     @Override
     public KasusListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         KasusListItemView itemView = KasusListItemView_.build(parent.getContext());
-        itemView.setOnItemClickListener(onItemClickListener);
+        itemView.setOnKasusItemClickListener(onKasusItemClickListener);
         return new KasusListViewHolder(itemView);
     }
 
@@ -36,8 +37,8 @@ public class KasusListAdapter extends RecyclerView.Adapter<KasusListAdapter.Kasu
         holder.view.setKasus(kasusList.get(position));
     }
 
-    public void setOnItemClickListener(KasusListItemView.OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
+    public void setOnKasusItemClickListener(OnKasusItemClickListener onKasusItemClickListener) {
+        this.onKasusItemClickListener = onKasusItemClickListener;
     }
 
     public class KasusListViewHolder extends RecyclerView.ViewHolder {

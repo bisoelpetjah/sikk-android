@@ -3,6 +3,7 @@ package com.senyummanja.sikk.adapters;
 import android.support.v7.widget.RecyclerView;
 import android.view.ViewGroup;
 
+import com.senyummanja.sikk.interfaces.OnAktorItemClickListener;
 import com.senyummanja.sikk.models.Aktor;
 import com.senyummanja.sikk.views.AktorListItemView;
 import com.senyummanja.sikk.views.AktorListItemView_;
@@ -17,7 +18,7 @@ public class AktorListAdapter extends RecyclerView.Adapter<AktorListAdapter.Akto
 
     public List<Aktor> aktorList = new ArrayList<>();
 
-    private AktorListItemView.OnItemClickListener onItemClickListener;
+    private OnAktorItemClickListener onAktorItemClickListener;
 
     @Override
     public int getItemCount() {
@@ -27,7 +28,7 @@ public class AktorListAdapter extends RecyclerView.Adapter<AktorListAdapter.Akto
     @Override
     public AktorListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         AktorListItemView itemView = AktorListItemView_.build(parent.getContext());
-        itemView.setOnItemClickListener(onItemClickListener);
+        itemView.setOnAktorItemClickListener(onAktorItemClickListener);
         return new AktorListViewHolder(itemView);
     }
 
@@ -36,8 +37,8 @@ public class AktorListAdapter extends RecyclerView.Adapter<AktorListAdapter.Akto
         holder.view.setAktor(aktorList.get(position));
     }
 
-    public void setOnItemClickListener(AktorListItemView.OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
+    public void setOnAktorItemClickListener(OnAktorItemClickListener onAktorItemClickListener) {
+        this.onAktorItemClickListener = onAktorItemClickListener;
     }
 
     public class AktorListViewHolder extends RecyclerView.ViewHolder {

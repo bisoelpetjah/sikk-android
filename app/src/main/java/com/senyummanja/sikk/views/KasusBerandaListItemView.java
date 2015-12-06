@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.senyummanja.sikk.R;
-import com.senyummanja.sikk.interfaces.OnKasusItemClickListener;
 import com.senyummanja.sikk.models.Kasus;
 import com.senyummanja.sikk.utils.RoundedDrawable;
 
@@ -17,10 +16,10 @@ import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
 /**
- * Created by irvan on 12/5/15.
+ * Created by irvan on 12/6/15.
  */
-@EViewGroup(R.layout.layout_list_item_kasus)
-public class KasusListItemView extends RelativeLayout {
+@EViewGroup(R.layout.layout_list_item_beranda_kasus)
+public class KasusBerandaListItemView extends RelativeLayout {
 
     @ViewById(R.id.statusBadge)
     protected ImageView imageViewStatusBadge;
@@ -28,33 +27,27 @@ public class KasusListItemView extends RelativeLayout {
     @ViewById(R.id.namaKasus)
     protected TextView textViewNamaKasus;
 
-    @ViewById(R.id.aktor)
-    protected TextView textViewPelaku;
-
-    @ViewById(R.id.watch)
-    protected TextView textViewWatch;
-
-    @ViewById(R.id.waktu)
-    protected TextView textViewWaktu;
+    @ViewById(R.id.sinopsis)
+    protected TextView textViewSinopsis;
 
     private Kasus kasus;
-    private OnKasusItemClickListener onKasusItemClickListener;
+    private OnItemClickListener onItemClickListener;
 
-    public KasusListItemView(Context context) {
+    public KasusBerandaListItemView(Context context) {
         super(context);
     }
 
-    public KasusListItemView(Context context, AttributeSet attrs) {
+    public KasusBerandaListItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public KasusListItemView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public KasusBerandaListItemView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @Click(R.id.button)
     protected void itemClicked() {
-        if (onKasusItemClickListener != null) onKasusItemClickListener.onKasusItemClick(kasus);
+        if (onItemClickListener != null) onItemClickListener.onItemClick(kasus);
     }
 
     public void setKasus(Kasus kasus) {
@@ -68,13 +61,15 @@ public class KasusListItemView extends RelativeLayout {
                     .into(RoundedDrawable.makeRoundedDrawableTarget(imageViewStatusBadge));
 
             textViewNamaKasus.setText(kasus.nama);
-            textViewPelaku.setText(kasus.aktor.nama);
-            textViewWatch.setText("" + kasus.watch);
-            textViewWaktu.setText(kasus.time + " menit");
+            textViewSinopsis.setText(kasus.sinopsis);
         }
     }
 
-    public void setOnKasusItemClickListener(OnKasusItemClickListener onKasusItemClickListener) {
-        this.onKasusItemClickListener = onKasusItemClickListener;
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(Kasus kasus);
     }
 }

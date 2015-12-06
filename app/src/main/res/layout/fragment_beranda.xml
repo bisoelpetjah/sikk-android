@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent" android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="BERANDA"/>
+        <TextView
+            android:id="@+id/labelPilihan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/label_pilihan_editor"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/bg_toolbar"/>
 
-</RelativeLayout>
+        <View
+            android:id="@+id/dividerPilihan"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/labelPilihan"
+            android:background="@color/bg_toolbar"/>
+
+        <View
+            android:layout_width="20dp"
+            android:layout_height="5dp"
+            android:layout_above="@id/dividerPilihan"
+            android:layout_alignParentRight="true"
+            android:background="@color/bg_toolbar"/>
+
+        <LinearLayout
+            android:id="@+id/pilihan"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerPilihan"
+            android:padding="5dp"
+            android:orientation="vertical"/>
+
+    </RelativeLayout>
+</ScrollView>

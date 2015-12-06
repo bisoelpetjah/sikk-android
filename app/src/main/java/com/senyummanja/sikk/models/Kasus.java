@@ -8,4 +8,5 @@ public class Kasus {
     public Aktor aktor = new Aktor();
     public int watch = 0;
     public int time = 0;
+    public String sinopsis = "";
 }

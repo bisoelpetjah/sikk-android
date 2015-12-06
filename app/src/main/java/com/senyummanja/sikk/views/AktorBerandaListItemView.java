@@ -8,7 +8,6 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.senyummanja.sikk.R;
-import com.senyummanja.sikk.interfaces.OnAktorItemClickListener;
 import com.senyummanja.sikk.models.Aktor;
 import com.senyummanja.sikk.utils.RoundedDrawable;
 
@@ -19,11 +18,8 @@ import org.androidannotations.annotations.ViewById;
 /**
  * Created by irvan on 12/5/15.
  */
-@EViewGroup(R.layout.layout_list_item_aktor)
-public class AktorListItemView extends RelativeLayout {
-
-    @ViewById(R.id.nilai)
-    protected TextView textViewNilai;
+@EViewGroup(R.layout.layout_list_item_beranda_aktor)
+public class AktorBerandaListItemView extends RelativeLayout {
 
     @ViewById(R.id.foto)
     protected ImageView imageViewFoto;
@@ -31,27 +27,27 @@ public class AktorListItemView extends RelativeLayout {
     @ViewById(R.id.nama)
     protected TextView textViewNama;
 
-    @ViewById(R.id.jabatan)
-    protected TextView textViewJabatan;
+    @ViewById(R.id.sinopsis)
+    protected TextView textViewSinopsis;
 
     private Aktor aktor;
-    private OnAktorItemClickListener onAktorItemClickListener;
+    private OnItemClickListener onItemClickListener;
 
-    public AktorListItemView(Context context) {
+    public AktorBerandaListItemView(Context context) {
         super(context);
     }
 
-    public AktorListItemView(Context context, AttributeSet attrs) {
+    public AktorBerandaListItemView(Context context, AttributeSet attrs) {
         super(context, attrs);
     }
 
-    public AktorListItemView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public AktorBerandaListItemView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
 
     @Click(R.id.button)
     protected void itemClicked() {
-        if (onAktorItemClickListener != null) onAktorItemClickListener.onAktorItemClick(aktor);
+        if (onItemClickListener != null) onItemClickListener.onItemClick(aktor);
     }
 
     public void setAktor(Aktor aktor) {
@@ -64,13 +60,16 @@ public class AktorListItemView extends RelativeLayout {
                     .centerCrop()
                     .into(RoundedDrawable.makeRoundedDrawableTarget(imageViewFoto));
 
-            textViewNilai.setText("Rp" + aktor.nilai + ",00");
             textViewNama.setText(aktor.nama);
-            textViewJabatan.setText(aktor.jabatan);
+            textViewSinopsis.setText(aktor.sinopsis);
         }
     }
 
-    public void setOnAktorItemClickListener(OnAktorItemClickListener onAktorItemClickListener) {
-        this.onAktorItemClickListener = onAktorItemClickListener;
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(Aktor aktor);
     }
 }

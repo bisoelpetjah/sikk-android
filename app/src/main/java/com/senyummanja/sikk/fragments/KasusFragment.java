@@ -7,8 +7,8 @@ import com.malinskiy.superrecyclerview.SuperRecyclerView;
 import com.senyummanja.sikk.KasusDetailActivity_;
 import com.senyummanja.sikk.R;
 import com.senyummanja.sikk.adapters.KasusListAdapter;
+import com.senyummanja.sikk.interfaces.OnKasusItemClickListener;
 import com.senyummanja.sikk.models.Kasus;
-import com.senyummanja.sikk.views.KasusListItemView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -18,7 +18,7 @@ import org.androidannotations.annotations.ViewById;
  * Created by irvan on 12/5/15.
  */
 @EFragment(R.layout.fragment_kasus)
-public class KasusFragment extends Fragment implements KasusListItemView.OnItemClickListener {
+public class KasusFragment extends Fragment implements OnKasusItemClickListener {
 
     @ViewById(R.id.kasusList)
     protected SuperRecyclerView recyclerViewKasus;
@@ -27,7 +27,7 @@ public class KasusFragment extends Fragment implements KasusListItemView.OnItemC
 
     @AfterViews
     protected void initViews() {
-        adapter.setOnItemClickListener(this);
+        adapter.setOnKasusItemClickListener(this);
 
         recyclerViewKasus.setAdapter(adapter);
         recyclerViewKasus.setLayoutManager(new LinearLayoutManager(getActivity()));
@@ -36,7 +36,7 @@ public class KasusFragment extends Fragment implements KasusListItemView.OnItemC
     }
 
     @Override
-    public void onItemClick(Kasus kasus) {
+    public void onKasusItemClick(Kasus kasus) {
         KasusDetailActivity_.intent(this).start();
     }
 

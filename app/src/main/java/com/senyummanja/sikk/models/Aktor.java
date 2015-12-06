@@ -8,4 +8,5 @@ public class Aktor {
     public String foto = "";
     public String jabatan = "";
     public long nilai = 0;
+    public String sinopsis;
 }

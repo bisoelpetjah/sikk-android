@@ -5,6 +5,7 @@ import android.widget.LinearLayout;
 
 import com.senyummanja.sikk.KasusDetailActivity_;
 import com.senyummanja.sikk.R;
+import com.senyummanja.sikk.interfaces.OnKasusItemClickListener;
 import com.senyummanja.sikk.models.Kasus;
 import com.senyummanja.sikk.views.KasusListItemView;
 import com.senyummanja.sikk.views.KasusListItemView_;
@@ -17,7 +18,7 @@ import org.androidannotations.annotations.ViewById;
  * Created by irvan on 12/5/15.
  */
 @EFragment(R.layout.fragment_aktor_kasus)
-public class AktorKasusFragment extends Fragment implements KasusListItemView.OnItemClickListener {
+public class AktorKasusFragment extends Fragment implements OnKasusItemClickListener {
 
     @ViewById(R.id.layout)
     protected LinearLayout linearLayout;
@@ -28,7 +29,7 @@ public class AktorKasusFragment extends Fragment implements KasusListItemView.On
     }
 
     @Override
-    public void onItemClick(Kasus kasus) {
+    public void onKasusItemClick(Kasus kasus) {
         KasusDetailActivity_.intent(this).start();
     }
 
@@ -41,7 +42,7 @@ public class AktorKasusFragment extends Fragment implements KasusListItemView.On
             kasus.aktor.nama = "Muhammad Jesus";
 
             KasusListItemView itemView = KasusListItemView_.build(getActivity());
-            itemView.setOnItemClickListener(this);
+            itemView.setOnKasusItemClickListener(this);
             itemView.setKasus(kasus);
             linearLayout.addView(itemView);
         }
