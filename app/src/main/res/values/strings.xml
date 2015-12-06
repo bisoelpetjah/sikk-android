@@ -2,6 +2,8 @@
 <resources>
     <string name="app_name">SIKK</string>
 
+    <string name="action_search">Cari</string>
+
     <string name="drawer_beranda">Beranda</string>
     <string name="drawer_kasus">Kasus</string>
     <string name="drawer_pelaku">Pelaku</string>

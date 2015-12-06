@@ -2,10 +2,13 @@ package com.senyummanja.sikk;
 
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.senyummanja.sikk.fragments.BerandaFragment_;
@@ -14,12 +17,15 @@ import com.senyummanja.sikk.fragments.PelakuFragment_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.OptionsMenu;
+import org.androidannotations.annotations.OptionsMenuItem;
 import org.androidannotations.annotations.ViewById;
 
 /**
  * Created by irvan on 12/4/15.
  */
 @EActivity(R.layout.activity_main)
+@OptionsMenu(R.menu.main)
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     @ViewById(R.id.toolbar)
@@ -30,6 +36,9 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     @ViewById(R.id.navigationView)
     protected NavigationView navigationView;
+
+    @OptionsMenuItem(R.id.action_search)
+    protected MenuItem menuItemSearch;
 
     private ActionBarDrawerToggle drawerToggle;
 
@@ -53,21 +62,32 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         switch (item.getItemId()) {
             case R.id.drawer_beranda: {
                 assignFragment(BerandaFragment_.builder().build());
+                getSupportActionBar().setTitle(R.string.app_name);
                 drawerLayout.closeDrawers();
                 return true;
             }
             case R.id.drawer_kasus: {
                 assignFragment(KasusFragment_.builder().build());
+                getSupportActionBar().setTitle(R.string.drawer_kasus);
                 drawerLayout.closeDrawers();
                 return true;
             }
             case R.id.drawer_pelaku: {
                 assignFragment(PelakuFragment_.builder().build());
+                getSupportActionBar().setTitle(R.string.drawer_pelaku);
                 drawerLayout.closeDrawers();
                 return true;
             }
         }
         return false;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        SearchView searchView = (SearchView) MenuItemCompat.getActionView(menuItemSearch);
+        searchView.setQueryHint(getResources().getString(R.string.action_search));
+
+        return super.onPrepareOptionsMenu(menu);
     }
 
     private void assignFragment(Fragment fragment) {
