@@ -6,40 +6,47 @@
         android:id="@+id/statusBadge"
         android:layout_width="64dp"
         android:layout_height="64dp"
-        android:layout_margin="10dp"
-        android:layout_centerVertical="true"/>
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentRight="true"/>
 
     <TextView
         android:id="@+id/namaKasus"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_toRightOf="@id/statusBadge"
+        android:layout_toLeftOf="@id/statusBadge"
         android:textSize="20sp"
         android:textStyle="bold"
         android:lines="2"
-        android:maxLines="2"/>
+        android:maxLines="2"
+        android:ellipsize="end"/>
 
     <TextView
         android:id="@+id/pelaku"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
         android:layout_below="@id/namaKasus"
-        android:layout_toRightOf="@id/statusBadge"
-        android:textSize="16sp"/>
+        android:layout_toLeftOf="@id/statusBadge"
+        android:textSize="16sp"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"/>
 
     <TextView
-        android:id="@+id/watch"
+        android:id="@+id/waktu"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
-        android:layout_marginRight="10dp"
+        android:layout_marginRight="8dp"
         android:layout_below="@id/pelaku"
-        android:layout_alignParentRight="true"
-        android:textSize="12sp"/>
+        android:textSize="12sp"
+        android:gravity="right"/>
 
     <ImageView
         android:id="@+id/watchIcon"
@@ -47,26 +54,23 @@
         android:layout_height="12dp"
         android:layout_marginRight="1dp"
         android:layout_marginBottom="1dp"
-        android:layout_toLeftOf="@id/watch"
-        android:layout_alignBottom="@id/watch"
+        android:layout_toRightOf="@id/waktu"
+        android:layout_alignBottom="@id/waktu"
         android:src="@drawable/ic_watch"/>
 
     <TextView
-        android:id="@+id/waktu"
-        android:layout_width="match_parent"
+        android:id="@+id/watch"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="8dp"
-        android:layout_toRightOf="@id/statusBadge"
-        android:layout_toLeftOf="@id/watchIcon"
-        android:layout_alignBottom="@id/watch"
-        android:textSize="12sp"
-        android:gravity="right"/>
+        android:layout_toRightOf="@id/watchIcon"
+        android:layout_alignBottom="@id/waktu"
+        android:textSize="12sp"/>
 
     <View
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="5dp"
-        android:layout_below="@id/watch"
+        android:layout_below="@id/waktu"
         android:background="@android:color/darker_gray"/>
 
 </RelativeLayout>
