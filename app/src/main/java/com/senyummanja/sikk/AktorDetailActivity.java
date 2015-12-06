@@ -10,12 +10,13 @@ import android.widget.ImageView;
 
 import com.bumptech.glide.Glide;
 import com.senyummanja.sikk.fragments.adapters.AktorDetailPagerAdapter;
-import com.senyummanja.sikk.utils.DynamicViewPager;
 import com.senyummanja.sikk.utils.RoundedDrawable;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
+
+import nevet.me.wcviewpager.WrapContentViewPager;
 
 /**
  * Created by irvan on 12/6/15.
@@ -36,7 +37,7 @@ public class AktorDetailActivity extends AppCompatActivity {
     protected ImageView imageViewFoto;
 
     @ViewById(R.id.viewPager)
-    protected DynamicViewPager viewPager;
+    protected WrapContentViewPager viewPager;
 
     @AfterViews
     protected void initViews() {
