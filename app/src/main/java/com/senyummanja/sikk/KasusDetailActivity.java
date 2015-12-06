@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 
 import org.androidannotations.annotations.AfterViews;
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EActivity;
 import org.androidannotations.annotations.ViewById;
 
@@ -36,5 +37,10 @@ public class KasusDetailActivity extends AppCompatActivity {
                 finish();
             }
         });
+    }
+
+    @Click(R.id.aktor)
+    protected void aktorClick() {
+        AktorDetailActivity_.intent(this).start();
     }
 }
