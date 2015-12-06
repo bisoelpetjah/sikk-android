@@ -46,7 +46,7 @@ public class AktorFragment extends Fragment implements OnAktorItemClickListener 
             aktor.nama = "Muhammad Jesus";
             aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
             aktor.jabatan = "Direktur Korupsi #" + i;
-            aktor.nilai = 9000000000000l - (i * 1000000);
+            aktor.nilai = "Rp900.000.000.000,00";
             adapter.aktorList.add(aktor);
         }
     }

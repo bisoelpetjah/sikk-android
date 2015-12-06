@@ -25,7 +25,7 @@
             android:background="@color/bg_toolbar"/>
 
         <View
-            android:layout_width="20dp"
+            android:layout_width="15dp"
             android:layout_height="5dp"
             android:layout_above="@id/dividerPilihan"
             android:layout_alignParentRight="true"
@@ -38,6 +38,112 @@
             android:layout_below="@id/dividerPilihan"
             android:padding="5dp"
             android:orientation="vertical"/>
+
+        <TextView
+            android:id="@+id/labelKasus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/pilihan"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/label_kasus_top"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/bg_toolbar"/>
+
+        <View
+            android:id="@+id/dividerKasus"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/labelKasus"
+            android:background="@color/bg_toolbar"/>
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="5dp"
+            android:layout_above="@id/dividerKasus"
+            android:layout_alignParentRight="true"
+            android:background="@color/bg_toolbar"/>
+
+        <LinearLayout
+            android:id="@+id/kasus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerKasus"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:orientation="vertical"/>
+
+        <TextView
+            android:id="@+id/labelAktor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/kasus"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/label_aktop_top"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/bg_toolbar"/>
+
+        <View
+            android:id="@+id/dividerAktor"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/labelAktor"
+            android:background="@color/bg_toolbar"/>
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="7dp"
+            android:layout_above="@id/dividerAktor"
+            android:layout_alignParentRight="true"
+            android:background="@color/bg_toolbar"/>
+
+        <LinearLayout
+            android:id="@+id/aktor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerAktor"
+            android:padding="5dp"
+            android:orientation="vertical"/>
+
+        <TextView
+            android:id="@+id/labelTrivia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/aktor"
+            android:paddingLeft="15dp"
+            android:paddingTop="10dp"
+            android:text="@string/label_trivia"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/bg_toolbar"/>
+
+        <View
+            android:id="@+id/dividerTrivia"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginLeft="15dp"
+            android:layout_below="@id/labelTrivia"
+            android:background="@color/bg_toolbar"/>
+
+        <View
+            android:layout_width="15dp"
+            android:layout_height="5dp"
+            android:layout_above="@id/dividerTrivia"
+            android:layout_alignParentRight="true"
+            android:background="@color/bg_toolbar"/>
+
+        <TextView
+            android:id="@+id/trivia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/dividerTrivia"
+            android:padding="10dp"
+            android:textSize="16sp"/>
 
     </RelativeLayout>
 </ScrollView>

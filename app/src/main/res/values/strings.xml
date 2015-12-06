@@ -9,6 +9,9 @@
     <string name="drawer_aktor">Aktor</string>
 
     <string name="label_pilihan_editor">Pilihan Editor</string>
+    <string name="label_kasus_top">Kasus Terpanas</string>
+    <string name="label_aktop_top">Koruptor Terpanas</string>
+    <string name="label_trivia">Trivia</string>
 
     <string name="label_nilai_total">Nilai total:</string>
     <string name="label_aktor">Aktor:</string>

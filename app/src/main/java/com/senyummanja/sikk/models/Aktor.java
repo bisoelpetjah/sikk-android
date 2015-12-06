@@ -7,6 +7,6 @@ public class Aktor {
     public String nama = "";
     public String foto = "";
     public String jabatan = "";
-    public long nilai = 0;
+    public String nilai = "";
     public String sinopsis;
 }

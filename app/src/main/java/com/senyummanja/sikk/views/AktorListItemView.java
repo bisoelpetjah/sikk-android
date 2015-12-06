@@ -64,7 +64,7 @@ public class AktorListItemView extends RelativeLayout {
                     .centerCrop()
                     .into(RoundedDrawable.makeRoundedDrawableTarget(imageViewFoto));
 
-            textViewNilai.setText("Rp" + aktor.nilai + ",00");
+            textViewNilai.setText(aktor.nilai);
             textViewNama.setText(aktor.nama);
             textViewJabatan.setText(aktor.jabatan);
         }

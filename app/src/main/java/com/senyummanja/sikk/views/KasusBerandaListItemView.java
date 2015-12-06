@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.senyummanja.sikk.R;
+import com.senyummanja.sikk.interfaces.OnKasusItemClickListener;
 import com.senyummanja.sikk.models.Kasus;
 import com.senyummanja.sikk.utils.RoundedDrawable;
 
@@ -31,7 +32,7 @@ public class KasusBerandaListItemView extends RelativeLayout {
     protected TextView textViewSinopsis;
 
     private Kasus kasus;
-    private OnItemClickListener onItemClickListener;
+    private OnKasusItemClickListener onKasusItemClickListener;
 
     public KasusBerandaListItemView(Context context) {
         super(context);
@@ -47,7 +48,7 @@ public class KasusBerandaListItemView extends RelativeLayout {
 
     @Click(R.id.button)
     protected void itemClicked() {
-        if (onItemClickListener != null) onItemClickListener.onItemClick(kasus);
+        if (onKasusItemClickListener != null) onKasusItemClickListener.onKasusItemClick(kasus);
     }
 
     public void setKasus(Kasus kasus) {
@@ -65,11 +66,7 @@ public class KasusBerandaListItemView extends RelativeLayout {
         }
     }
 
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
-    }
-
-    public interface OnItemClickListener {
-        void onItemClick(Kasus kasus);
+    public void setOnKasusItemClickListener(OnKasusItemClickListener onKasusItemClickListener) {
+        this.onKasusItemClickListener = onKasusItemClickListener;
     }
 }

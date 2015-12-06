@@ -8,6 +8,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.senyummanja.sikk.R;
+import com.senyummanja.sikk.interfaces.OnAktorItemClickListener;
 import com.senyummanja.sikk.models.Aktor;
 import com.senyummanja.sikk.utils.RoundedDrawable;
 
@@ -31,7 +32,7 @@ public class AktorBerandaListItemView extends RelativeLayout {
     protected TextView textViewSinopsis;
 
     private Aktor aktor;
-    private OnItemClickListener onItemClickListener;
+    private OnAktorItemClickListener onAktorItemClickListener;
 
     public AktorBerandaListItemView(Context context) {
         super(context);
@@ -47,7 +48,7 @@ public class AktorBerandaListItemView extends RelativeLayout {
 
     @Click(R.id.button)
     protected void itemClicked() {
-        if (onItemClickListener != null) onItemClickListener.onItemClick(aktor);
+        if (onAktorItemClickListener != null) onAktorItemClickListener.onAktorItemClick(aktor);
     }
 
     public void setAktor(Aktor aktor) {
@@ -65,11 +66,7 @@ public class AktorBerandaListItemView extends RelativeLayout {
         }
     }
 
-    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
-        this.onItemClickListener = onItemClickListener;
-    }
-
-    public interface OnItemClickListener {
-        void onItemClick(Aktor aktor);
+    public void setOnAktorItemClickListener(OnAktorItemClickListener onAktorItemClickListener) {
+        this.onAktorItemClickListener = onAktorItemClickListener;
     }
 }
