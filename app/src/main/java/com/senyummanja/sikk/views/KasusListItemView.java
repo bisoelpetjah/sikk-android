@@ -27,7 +27,7 @@ public class KasusListItemView extends RelativeLayout {
     @ViewById(R.id.namaKasus)
     protected TextView textViewNamaKasus;
 
-    @ViewById(R.id.pelaku)
+    @ViewById(R.id.aktor)
     protected TextView textViewPelaku;
 
     @ViewById(R.id.watch)
@@ -67,7 +67,7 @@ public class KasusListItemView extends RelativeLayout {
                     .into(RoundedDrawable.makeRoundedDrawableTarget(imageViewStatusBadge));
 
             textViewNamaKasus.setText(kasus.nama);
-            textViewPelaku.setText(kasus.pelaku.nama);
+            textViewPelaku.setText(kasus.aktor.nama);
             textViewWatch.setText("" + kasus.watch);
             textViewWaktu.setText(kasus.time + " menit");
         }

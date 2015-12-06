@@ -38,7 +38,7 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="15dp"
                     android:layout_below="@id/namaKasus"
-                    android:text="Nilai total: "
+                    android:text="@string/label_nilai_total"
                     android:textColor="@android:color/white"/>
 
                 <TextView
@@ -53,22 +53,23 @@
                     android:textStyle="bold"/>
 
                 <TextView
-                    android:id="@+id/labelPelaku"
+                    android:id="@+id/labelAktor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="10dp"
                     android:layout_below="@id/labelNilai"
-                    android:text="Pelaku:"
+                    android:text="@string/label_aktor"
                     android:textColor="@android:color/white"/>
 
                 <TextView
+                    android:id="@+id/aktor"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="5dp"
                     android:layout_marginBottom="10dp"
-                    android:layout_toRightOf="@id/labelPelaku"
-                    android:layout_alignBaseline="@id/labelPelaku"
+                    android:layout_toRightOf="@id/labelAktor"
+                    android:layout_alignBaseline="@id/labelAktor"
                     android:paddingLeft="10dp"
                     android:paddingTop="5dp"
                     android:paddingRight="10dp"

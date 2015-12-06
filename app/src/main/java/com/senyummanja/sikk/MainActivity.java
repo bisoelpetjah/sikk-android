@@ -13,7 +13,7 @@ import android.view.MenuItem;
 
 import com.senyummanja.sikk.fragments.BerandaFragment_;
 import com.senyummanja.sikk.fragments.KasusFragment_;
-import com.senyummanja.sikk.fragments.PelakuFragment_;
+import com.senyummanja.sikk.fragments.AktorFragment_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
@@ -73,8 +73,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
                 return true;
             }
             case R.id.drawer_pelaku: {
-                assignFragment(PelakuFragment_.builder().build());
-                getSupportActionBar().setTitle(R.string.drawer_pelaku);
+                assignFragment(AktorFragment_.builder().build());
+                getSupportActionBar().setTitle(R.string.drawer_aktor);
                 drawerLayout.closeDrawers();
                 return true;
             }

@@ -9,6 +9,6 @@
             android:title="@string/drawer_kasus"/>
         <item
             android:id="@+id/drawer_pelaku"
-            android:title="@string/drawer_pelaku"/>
+            android:title="@string/drawer_aktor"/>
     </group>
 </menu>

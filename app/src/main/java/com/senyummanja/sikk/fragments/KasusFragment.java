@@ -46,7 +46,7 @@ public class KasusFragment extends Fragment implements KasusListItemView.OnItemC
             kasus.nama = "Kasus Korupsi #" + i;
             kasus.time = 20 - i;
             kasus.watch = 200 - (i * 10);
-            kasus.pelaku.nama = "Muhammad Jesus";
+            kasus.aktor.nama = "Muhammad Jesus";
             adapter.kasusList.add(kasus);
         }
         adapter.notifyDataSetChanged();

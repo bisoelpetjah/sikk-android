@@ -26,7 +26,7 @@
         android:ellipsize="end"/>
 
     <TextView
-        android:id="@+id/pelaku"
+        android:id="@+id/aktor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
@@ -45,7 +45,7 @@
         android:layout_marginLeft="10dp"
         android:layout_marginTop="5dp"
         android:layout_marginRight="8dp"
-        android:layout_below="@id/pelaku"
+        android:layout_below="@id/aktor"
         android:textSize="12sp"
         android:gravity="right"/>
 
