@@ -9,7 +9,6 @@ import android.widget.TextView;
 import com.bumptech.glide.Glide;
 import com.senyummanja.sikk.R;
 import com.senyummanja.sikk.models.Kasus;
-import com.senyummanja.sikk.models.Pelaku;
 import com.senyummanja.sikk.utils.RoundedDrawable;
 
 import org.androidannotations.annotations.Click;
@@ -68,18 +67,9 @@ public class KasusListItemView extends RelativeLayout {
                     .into(RoundedDrawable.makeRoundedDrawableTarget(imageViewStatusBadge));
 
             textViewNamaKasus.setText(kasus.nama);
+            textViewPelaku.setText(kasus.pelaku.nama);
             textViewWatch.setText("" + kasus.watch);
             textViewWaktu.setText(kasus.time + " menit");
-
-            StringBuilder builder = new StringBuilder();
-            for (Pelaku pelaku : kasus.pelakuList) {
-                builder.append(pelaku.nama);
-                builder.append(", ");
-            }
-            if (!kasus.pelakuList.isEmpty()) {
-                builder.delete(builder.length() - 2, builder.length() - 1);
-            }
-            textViewPelaku.setText(builder.toString());
         }
     }
 

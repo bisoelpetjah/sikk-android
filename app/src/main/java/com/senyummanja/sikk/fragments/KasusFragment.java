@@ -8,15 +8,11 @@ import com.senyummanja.sikk.KasusDetailActivity_;
 import com.senyummanja.sikk.R;
 import com.senyummanja.sikk.adapters.KasusListAdapter;
 import com.senyummanja.sikk.models.Kasus;
-import com.senyummanja.sikk.models.Pelaku;
 import com.senyummanja.sikk.views.KasusListItemView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
 import org.androidannotations.annotations.ViewById;
-
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by irvan on 12/5/15.
@@ -50,13 +46,7 @@ public class KasusFragment extends Fragment implements KasusListItemView.OnItemC
             kasus.nama = "Kasus Korupsi #" + i;
             kasus.time = 20 - i;
             kasus.watch = 200 - (i * 10);
-            List<Pelaku> pelakuList = new ArrayList<>();
-            for (int j = 1; j <= (i % 4) + 1; j++) {
-                Pelaku pelaku = new Pelaku();
-                pelaku.nama = "Pelaku #" + j;
-                pelakuList.add(pelaku);
-            }
-            kasus.pelakuList = pelakuList;
+            kasus.pelaku.nama = "Muhammad Jesus";
             adapter.kasusList.add(kasus);
         }
         adapter.notifyDataSetChanged();

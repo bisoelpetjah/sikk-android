@@ -31,7 +31,7 @@
                     android:layout_marginTop="10dp"
                     android:layout_marginRight="10dp"
                     android:text="Kasus Papa Minta Saham"
-                    android:textSize="20sp"
+                    android:textSize="22sp"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
 
@@ -40,7 +40,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
+                    android:layout_marginTop="15dp"
                     android:layout_below="@id/namaKasus"
                     android:text="Nilai total: "
                     android:textColor="@android:color/white"/>
@@ -66,76 +66,20 @@
                     android:text="Pelaku:"
                     android:textColor="@android:color/white"/>
 
-                <org.apmem.tools.layouts.FlowLayout
-                    android:layout_width="match_parent"
+                <TextView
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/labelPelaku"
-                    android:layout_alignTop="@id/labelPelaku"
-                    android:layout_marginLeft="20dp"
-                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="5dp"
                     android:layout_marginBottom="10dp"
-                    android:orientation="horizontal">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:paddingLeft="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="5dp"
-                        android:text="Setya Novanto"
-                        android:textColor="@android:color/white"
-                        android:background="@drawable/bg_chip"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:paddingLeft="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="5dp"
-                        android:text="Muhammad Jesus"
-                        android:textColor="@android:color/white"
-                        android:background="@drawable/bg_chip"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:paddingLeft="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="5dp"
-                        android:text="Sule Sunda Bule"
-                        android:textColor="@android:color/white"
-                        android:background="@drawable/bg_chip"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:paddingLeft="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="5dp"
-                        android:text="Persib 1933"
-                        android:textColor="@android:color/white"
-                        android:background="@drawable/bg_chip"/>
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginRight="2dp"
-                        android:layout_marginBottom="2dp"
-                        android:paddingLeft="10dp"
-                        android:paddingTop="5dp"
-                        android:paddingRight="10dp"
-                        android:paddingBottom="5dp"
-                        android:text="John Cena"
-                        android:textColor="@android:color/white"
-                        android:background="@drawable/bg_chip"/>
-                </org.apmem.tools.layouts.FlowLayout>
+                    android:layout_toRightOf="@id/labelPelaku"
+                    android:layout_alignBaseline="@id/labelPelaku"
+                    android:paddingLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingRight="10dp"
+                    android:paddingBottom="5dp"
+                    android:text="Setya Novanto"
+                    android:textColor="@android:color/white"
+                    android:background="@drawable/bg_chip"/>
 
             </RelativeLayout>
 

@@ -8,7 +8,7 @@ import java.util.List;
  */
 public class Kasus {
     public String nama = "";
-    public List<Pelaku> pelakuList = new ArrayList<>();
+    public Pelaku pelaku = new Pelaku();
     public int watch = 0;
     public int time = 0;
 }
