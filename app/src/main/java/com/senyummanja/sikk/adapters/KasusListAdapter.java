@@ -17,6 +17,8 @@ public class KasusListAdapter extends RecyclerView.Adapter<KasusListAdapter.Kasu
 
     public List<Kasus> kasusList = new ArrayList<>();
 
+    private KasusListItemView.OnItemClickListener onItemClickListener;
+
     @Override
     public int getItemCount() {
         return kasusList.size();
@@ -25,12 +27,17 @@ public class KasusListAdapter extends RecyclerView.Adapter<KasusListAdapter.Kasu
     @Override
     public KasusListViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         KasusListItemView itemView = KasusListItemView_.build(parent.getContext());
+        itemView.setOnItemClickListener(onItemClickListener);
         return new KasusListViewHolder(itemView);
     }
 
     @Override
     public void onBindViewHolder(KasusListViewHolder holder, int position) {
         holder.view.setKasus(kasusList.get(position));
+    }
+
+    public void setOnItemClickListener(KasusListItemView.OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
     }
 
     public class KasusListViewHolder extends RecyclerView.ViewHolder {

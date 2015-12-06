@@ -12,6 +12,7 @@ import com.senyummanja.sikk.models.Kasus;
 import com.senyummanja.sikk.models.Pelaku;
 import com.senyummanja.sikk.utils.RoundedDrawable;
 
+import org.androidannotations.annotations.Click;
 import org.androidannotations.annotations.EViewGroup;
 import org.androidannotations.annotations.ViewById;
 
@@ -36,6 +37,9 @@ public class KasusListItemView extends RelativeLayout {
     @ViewById(R.id.waktu)
     protected TextView textViewWaktu;
 
+    private Kasus kasus;
+    private OnItemClickListener onItemClickListener;
+
     public KasusListItemView(Context context) {
         super(context);
     }
@@ -48,7 +52,14 @@ public class KasusListItemView extends RelativeLayout {
         super(context, attrs, defStyleAttr);
     }
 
+    @Click(R.id.button)
+    protected void itemClicked() {
+        if (onItemClickListener != null) onItemClickListener.onItemClick(kasus);
+    }
+
     public void setKasus(Kasus kasus) {
+        this.kasus = kasus;
+
         if (kasus != null) {
             Glide.with(getContext())
                     .load(R.drawable.ic_logo)
@@ -70,5 +81,13 @@ public class KasusListItemView extends RelativeLayout {
             }
             textViewPelaku.setText(builder.toString());
         }
+    }
+
+    public void setOnItemClickListener(OnItemClickListener onItemClickListener) {
+        this.onItemClickListener = onItemClickListener;
+    }
+
+    public interface OnItemClickListener {
+        void onItemClick(Kasus kasus);
     }
 }

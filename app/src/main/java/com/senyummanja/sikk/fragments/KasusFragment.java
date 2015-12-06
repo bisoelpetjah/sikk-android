@@ -4,10 +4,12 @@ import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 
 import com.malinskiy.superrecyclerview.SuperRecyclerView;
+import com.senyummanja.sikk.KasusDetailActivity_;
 import com.senyummanja.sikk.R;
 import com.senyummanja.sikk.adapters.KasusListAdapter;
 import com.senyummanja.sikk.models.Kasus;
 import com.senyummanja.sikk.models.Pelaku;
+import com.senyummanja.sikk.views.KasusListItemView;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
@@ -20,7 +22,7 @@ import java.util.List;
  * Created by irvan on 12/5/15.
  */
 @EFragment(R.layout.fragment_kasus)
-public class KasusFragment extends Fragment {
+public class KasusFragment extends Fragment implements KasusListItemView.OnItemClickListener {
 
     @ViewById(R.id.kasusList)
     protected SuperRecyclerView recyclerViewKasus;
@@ -29,10 +31,17 @@ public class KasusFragment extends Fragment {
 
     @AfterViews
     protected void initViews() {
+        adapter.setOnItemClickListener(this);
+
         recyclerViewKasus.setAdapter(adapter);
         recyclerViewKasus.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         performGetKasusList();
+    }
+
+    @Override
+    public void onItemClick(Kasus kasus) {
+        KasusDetailActivity_.intent(this).start();
     }
 
     private void performGetKasusList() {
