@@ -26,8 +26,8 @@ public class SplashActivity extends AppCompatActivity {
     @UiThread(delay = SPLASH_DELAY)
     protected void splashTimeout() {
         if (isActive) {
-            ActivityOptionsCompat options = ActivityOptionsCompat.makeCustomAnimation(this, R.anim.slide_in_right, R.anim.slide_out_left);
-            ActivityCompat.startActivity(this, LoginActivity_.intent(this).get(), options.toBundle());
+            ActivityOptionsCompat options = ActivityOptionsCompat.makeCustomAnimation(this, R.anim.zoom_in_enter, R.anim.zoom_out_exit);
+            ActivityCompat.startActivity(this, MainActivity_.intent(this).get(), options.toBundle());
             ActivityCompat.finishAfterTransition(this);
         }
     }

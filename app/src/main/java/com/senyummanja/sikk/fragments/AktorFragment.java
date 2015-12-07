@@ -44,7 +44,7 @@ public class AktorFragment extends Fragment implements OnAktorItemClickListener 
     private void performGetAktorList() {
         Aktor aktor = new Aktor();
         aktor.nama = "Setya Novanto";
-        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.foto = "http://fajar.co.id/wp-content/uploads/2015/07/Setya-Novanto.jpg";
         aktor.jabatan = "Ketua DPR RI";
         aktor.nilai = "?";
         Kasus kasus = new Kasus();
@@ -58,7 +58,7 @@ public class AktorFragment extends Fragment implements OnAktorItemClickListener 
 
         aktor = new Aktor();
         aktor.nama = "Susilo";
-        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.foto = "http://www.kapurnews.com/foto/berita/2015/4/22/susilo_kadisbun_riau1.jpg";
         aktor.jabatan = "Mantan Kadisbun Riau";
         aktor.nilai = "Rp38.000.000.000,00";
         kasus = new Kasus();

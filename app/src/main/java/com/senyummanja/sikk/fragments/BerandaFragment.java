@@ -46,89 +46,97 @@ public class BerandaFragment extends Fragment implements OnKasusItemClickListene
     protected void initViews() {
         KasusBerandaListItemView kasusBerandaItemView = KasusBerandaListItemView_.build(getActivity());
         Kasus kasus = new Kasus();
-        kasus.nama = "Kasus Papa Minta Saham";
-        kasus.sinopsis = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum ipsum elit, eget tempor justo mollis vel.";
+        kasus.nama = "Papi Ingin Saham";
+        kasus.sinopsis = "Kehadiran Ketua DPR RI Setya Novanto sangat dinanti untuk menyelesaikan dugaan pelanggaran etik yang ada dalam rekaman terkait permintaan saham kepada PT Freeport Indonesia.";
+        kasus.time = "3 hari";
+        kasus.watch = 1452;
+        kasus.aktor.nama = "Setya Novanto";
+        kasus.aktor.foto = "http://fajar.co.id/wp-content/uploads/2015/07/Setya-Novanto.jpg";
+        kasus.aktor.jabatan = "Ketua DPR RI";
+        kasus.aktor.nilai = "?";
+        kasus.aktor.kasusList.add(kasus);
+        kasus.progress = 2;
         kasusBerandaItemView.setOnKasusItemClickListener(this);
         kasusBerandaItemView.setKasus(kasus);
         linearLayoutPilihan.addView(kasusBerandaItemView);
 
         AktorBerandaListItemView aktorBerandaItemView = AktorBerandaListItemView_.build(getActivity());
         Aktor aktor = new Aktor();
-        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
-        aktor.nama = "Muhammad Jesus Gautama";
-        aktor.sinopsis = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum ipsum elit, eget tempor justo mollis vel.";
+        aktor.nama = "Setya Novanto";
+        aktor.sinopsis = "Setya Novanto: saya sudah bertemu dengan presiden beberapa waktu lalu, selain presiden saya juga bertemu dengan pimpinan Negara lainnya. Beberapa pimpinan yang saat itu ketemu adalah Ketua MA, Ketua KY serta Ketua MK.";
+        aktor.foto = "http://fajar.co.id/wp-content/uploads/2015/07/Setya-Novanto.jpg";
+        aktor.jabatan = "Ketua DPR RI";
+        aktor.nilai = "?";
+        kasus = new Kasus();
+        kasus.nama = "Papi Ingin Saham";
+        kasus.time = "3 hari";
+        kasus.watch = 1452;
+        kasus.aktor = aktor;
+        kasus.progress = 2;
+        aktor.kasusList.add(kasus);
         aktorBerandaItemView.setOnAktorItemClickListener(this);
         aktorBerandaItemView.setAktor(aktor);
         linearLayoutPilihan.addView(aktorBerandaItemView);
 
         kasusBerandaItemView = KasusBerandaListItemView_.build(getActivity());
         kasus = new Kasus();
-        kasus.nama = "Kasus Mama Minta Pulsa";
-        kasus.sinopsis = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum ipsum elit, eget tempor justo mollis vel. Nulla eget neque auctor purus rhoncus ornare in nec mauris. Sed in luctus risus. Donec id orci et eros fringilla tempor id non mi. Quisque id enim sed dui tincidunt lacinia non ac nibh.";
+        kasus.nama = "Korupsi Dana Hibah";
+        kasus.sinopsis = "Kejaksaan Negeri (Kejari) Serang menahan tersangka kasus dugaan korupsi dana hibah senilai Rp 2 miliar dari Pemerintah Provinsi Banten tahun anggaran 2013, yakni A Faisal Taufik, Ketua Yayasan Banten Muda Indonesia";
+        kasus.time = "1 hari";
+        kasus.watch = 512;
+        kasus.aktor.nama = "Faisal Taufik";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "Mantan Bupati Lebak";
+        kasus.aktor.nilai = "Rp2.000.000.000,00";
+        kasus.aktor.kasusList.add(kasus);
+        kasus.progress = 1;
         kasusBerandaItemView.setOnKasusItemClickListener(this);
         kasusBerandaItemView.setKasus(kasus);
         linearLayoutPilihan.addView(kasusBerandaItemView);
 
-        KasusListItemView kasusItemView = KasusListItemView_.build(getActivity());
+        kasusBerandaItemView = KasusBerandaListItemView_.build(getActivity());
         kasus = new Kasus();
-        kasus.nama = "Kasus Korupsi Daging Sapi";
-        kasus.time = "20";
-        kasus.watch = 150;
-        kasus.aktor.nama = "Tifatul Sembiring";
-        kasusItemView.setOnKasusItemClickListener(this);
-        kasusItemView.setKasus(kasus);
-        linearLayoutKasus.addView(kasusItemView);
+        kasus.nama = "Papi Ingin Saham";
+        kasus.time = "3 hari";
+        kasus.watch = 1452;
+        kasus.aktor.nama = "Setya Novanto";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "Ketua DPR RI";
+        kasus.aktor.nilai = "?";
+        kasus.aktor.kasusList.add(kasus);
+        kasus.progress = 2;
+        kasusBerandaItemView.setOnKasusItemClickListener(this);
+        kasusBerandaItemView.setKasus(kasus);
+        linearLayoutKasus.addView(kasusBerandaItemView);
 
-        kasusItemView = KasusListItemView_.build(getActivity());
-        kasus = new Kasus();
-        kasus.nama = "Kasus Korupsi Daging Kambing";
-        kasus.time = "25";
-        kasus.watch = 120;
-        kasus.aktor.nama = "Johannes Ridho";
-        kasusItemView.setOnKasusItemClickListener(this);
-        kasusItemView.setKasus(kasus);
-        linearLayoutKasus.addView(kasusItemView);
-
-        kasusItemView = KasusListItemView_.build(getActivity());
-        kasus = new Kasus();
-        kasus.nama = "Kasus Korupsi Daging Ayam";
-        kasus.time = "15";
-        kasus.watch = 100;
-        kasus.aktor.nama = "Sule";
-        kasusItemView.setOnKasusItemClickListener(this);
-        kasusItemView.setKasus(kasus);
-        linearLayoutKasus.addView(kasusItemView);
-
-        AktorListItemView aktorItemView = AktorListItemView_.build(getActivity());
+        aktorBerandaItemView = AktorBerandaListItemView_.build(getActivity());
         aktor = new Aktor();
-        aktor.nama = "Subur";
-        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
-        aktor.jabatan = "Orang Pintar";
-        aktor.nilai = "Rp1.500.000.000,00";
-        aktorItemView.setOnAktorItemClickListener(this);
-        aktorItemView.setAktor(aktor);
-        linearLayoutAktor.addView(aktorItemView);
+        aktor.nama = "Setya Novanto";
+        aktor.foto = "http://fajar.co.id/wp-content/uploads/2015/07/Setya-Novanto.jpg";
+        aktor.jabatan = "Ketua DPR RI";
+        aktor.nilai = "?";
+        kasus = new Kasus();
+        kasus.nama = "Papi Ingin Saham";
+        kasus.time = "3 hari";
+        kasus.watch = 1452;
+        kasus.aktor = aktor;
+        kasus.progress = 2;
+        aktor.kasusList.add(kasus);
+        aktor.kasusList.add(kasus);
+        aktorBerandaItemView.setOnAktorItemClickListener(this);
+        aktorBerandaItemView.setAktor(aktor);
+        linearLayoutAktor.addView(aktorBerandaItemView);
 
-        aktorItemView = AktorListItemView_.build(getActivity());
-        aktor = new Aktor();
-        aktor.nama = "Tatang Sutarma";
-        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
-        aktor.jabatan = "Orang Bodoh";
-        aktor.nilai = "Rp150.000.000,00";
-        aktorItemView.setOnAktorItemClickListener(this);
-        aktorItemView.setAktor(aktor);
-        linearLayoutAktor.addView(aktorItemView);
-
-        textViewTrivia.setText("Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas vestibulum ipsum elit, eget tempor justo mollis vel. Nulla eget neque auctor purus rhoncus ornare in nec mauris. Sed in luctus risus. Donec id orci et eros fringilla tempor id non mi. Quisque id enim sed dui tincidunt lacinia non ac nibh. Vestibulum nulla mi, hendrerit eu tempor sit amet, pretium non massa. Nulla cursus tellus et porta rhoncus. Morbi eget augue bibendum, auctor nunc tristique, iaculis nisi. Proin lectus lacus, pharetra vitae luctus tincidunt, condimentum in ipsum. Sed orci lacus, gravida sodales porttitor quis, ornare vitae neque. Nunc sollicitudin viverra turpis nec hendrerit.");
+        textViewTrivia.setText("Dari 50 kasus yang diselidiki KPK hanya 24 kasus yang disidik dan hanya 9 kasus yang masuk pengadilan.");
     }
 
     @Override
     public void onKasusItemClick(Kasus kasus) {
-        KasusDetailActivity_.intent(this).start();
+        KasusDetailActivity_.intent(this).kasus(kasus).start();
     }
 
     @Override
     public void onAktorItemClick(Aktor aktor) {
-        AktorDetailActivity_.intent(this).start();
+        AktorDetailActivity_.intent(this).aktor(aktor).start();
     }
 }
