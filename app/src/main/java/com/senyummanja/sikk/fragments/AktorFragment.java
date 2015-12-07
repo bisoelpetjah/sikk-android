@@ -41,13 +41,62 @@ public class AktorFragment extends Fragment implements OnAktorItemClickListener 
     }
 
     private void performGetAktorList() {
-        for (int i = 1; i <= 20; i++) {
-            Aktor aktor = new Aktor();
-            aktor.nama = "Muhammad Jesus";
-            aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
-            aktor.jabatan = "Direktur Korupsi #" + i;
-            aktor.nilai = "Rp900.000.000.000,00";
-            adapter.aktorList.add(aktor);
-        }
+        Aktor aktor = new Aktor();
+        aktor.nama = "Setya Novanto";
+        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.jabatan = "Ketua DPR RI";
+        aktor.nilai = "?";
+        adapter.aktorList.add(aktor);
+
+        aktor = new Aktor();
+        aktor.nama = "Susilo";
+        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.jabatan = "Mantan Kadisbun Riau";
+        aktor.nilai = "Rp38.000.000.000,00";
+        adapter.aktorList.add(aktor);
+
+        aktor = new Aktor();
+        aktor.nama = "Mohammad Bihar Sakti Wibowo";
+        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.jabatan = "Mantan Direktur PT Bursa Berjangka Jakarta";
+        aktor.nilai = "?";
+        adapter.aktorList.add(aktor);
+
+        aktor = new Aktor();
+        aktor.nama = "Mulyadi Jayabaya";
+        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.jabatan = "Mantan Bupati Lebak";
+        aktor.nilai = "Rp25.000.000.000,00";
+        adapter.aktorList.add(aktor);
+
+        aktor = new Aktor();
+        aktor.nama = "Faisal Taufik";
+        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.jabatan = "Ketua Yayasan Lembaga Banten Muda Indonesia";
+        aktor.nilai = "Rp2.000.000.000,00";
+        adapter.aktorList.add(aktor);
+
+        aktor = new Aktor();
+        aktor.nama = "Muhammad Guntur";
+        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.jabatan = "Mantan Kepala Badan Kepegawaian Daerah";
+        aktor.nilai = "Rp17.958.525.000,00";
+        adapter.aktorList.add(aktor);
+
+        aktor = new Aktor();
+        aktor.nama = "Junaidi Hamsyah";
+        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.jabatan = "Gubernur Bengkulu";
+        aktor.nilai = "Rp5.000.000.000,00";
+        adapter.aktorList.add(aktor);
+
+        aktor = new Aktor();
+        aktor.nama = "Fuad Amin";
+        aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        aktor.jabatan = "";
+        aktor.nilai = "Rp18.050.000.000,00";
+        adapter.aktorList.add(aktor);
+
+        adapter.notifyDataSetChanged();
     }
 }

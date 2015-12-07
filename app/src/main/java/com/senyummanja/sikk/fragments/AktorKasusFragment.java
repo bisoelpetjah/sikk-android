@@ -37,7 +37,7 @@ public class AktorKasusFragment extends Fragment implements OnKasusItemClickList
         for (int i = 1; i <= 8; i++) {
             Kasus kasus = new Kasus();
             kasus.nama = "Kasus Korupsi #" + i;
-            kasus.time = 20 - i;
+            kasus.time = "20";
             kasus.watch = 200 - (i * 10);
             kasus.aktor.nama = "Muhammad Jesus";
 

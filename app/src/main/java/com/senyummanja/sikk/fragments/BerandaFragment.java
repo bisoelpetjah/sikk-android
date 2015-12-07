@@ -72,7 +72,7 @@ public class BerandaFragment extends Fragment implements OnKasusItemClickListene
         KasusListItemView kasusItemView = KasusListItemView_.build(getActivity());
         kasus = new Kasus();
         kasus.nama = "Kasus Korupsi Daging Sapi";
-        kasus.time = 20;
+        kasus.time = "20";
         kasus.watch = 150;
         kasus.aktor.nama = "Tifatul Sembiring";
         kasusItemView.setOnKasusItemClickListener(this);
@@ -82,7 +82,7 @@ public class BerandaFragment extends Fragment implements OnKasusItemClickListene
         kasusItemView = KasusListItemView_.build(getActivity());
         kasus = new Kasus();
         kasus.nama = "Kasus Korupsi Daging Kambing";
-        kasus.time = 25;
+        kasus.time = "25";
         kasus.watch = 120;
         kasus.aktor.nama = "Johannes Ridho";
         kasusItemView.setOnKasusItemClickListener(this);
@@ -92,7 +92,7 @@ public class BerandaFragment extends Fragment implements OnKasusItemClickListene
         kasusItemView = KasusListItemView_.build(getActivity());
         kasus = new Kasus();
         kasus.nama = "Kasus Korupsi Daging Ayam";
-        kasus.time = 15;
+        kasus.time = "15";
         kasus.watch = 100;
         kasus.aktor.nama = "Sule";
         kasusItemView.setOnKasusItemClickListener(this);

@@ -70,7 +70,7 @@ public class KasusListItemView extends RelativeLayout {
             textViewNamaKasus.setText(kasus.nama);
             textViewPelaku.setText(kasus.aktor.nama);
             textViewWatch.setText("" + kasus.watch);
-            textViewWaktu.setText(kasus.time + " menit");
+            textViewWaktu.setText(kasus.time);
         }
     }
 

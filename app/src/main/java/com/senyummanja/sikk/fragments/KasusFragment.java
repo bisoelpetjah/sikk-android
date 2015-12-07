@@ -41,14 +41,70 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
     }
 
     private void performGetKasusList() {
-        for (int i = 1; i <= 20; i++) {
-            Kasus kasus = new Kasus();
-            kasus.nama = "Kasus Korupsi #" + i;
-            kasus.time = 20 - i;
-            kasus.watch = 200 - (i * 10);
-            kasus.aktor.nama = "Muhammad Jesus";
-            adapter.kasusList.add(kasus);
-        }
+        Kasus kasus = new Kasus();
+        kasus.nama = "Papi Ingin Saham";
+        kasus.time = "3 hari";
+        kasus.watch = 1452;
+        kasus.aktor.nama = "Setya Novanto";
+        kasus.progress = 2;
+        adapter.kasusList.add(kasus);
+
+        kasus = new Kasus();
+        kasus.nama = "Korupsi Pengentasan K2I Pemprov Riau";
+        kasus.time = "1 hari";
+        kasus.watch = 312;
+        kasus.aktor.nama = "Susilo";
+        kasus.progress = 4;
+        adapter.kasusList.add(kasus);
+
+        kasus = new Kasus();
+        kasus.nama = "Suap Penerbitan Izin Usaha Lembaga Kliring Berjangka";
+        kasus.time = "1 hari";
+        kasus.watch = 225;
+        kasus.aktor.nama = "Mohammad Bihar Sakti Wibowo";
+        kasus.progress = 3;
+        adapter.kasusList.add(kasus);
+
+        kasus = new Kasus();
+        kasus.nama = "Korupsi Penggunaan Dana Jamkesmas";
+        kasus.time = "1 hari";
+        kasus.watch = 275;
+        kasus.aktor.nama = "Mulyadi Jayabaya";
+        kasus.progress = 4;
+        adapter.kasusList.add(kasus);
+
+        kasus = new Kasus();
+        kasus.nama = "Korupsi Dana Hibah";
+        kasus.time = "1 hari";
+        kasus.watch = 512;
+        kasus.aktor.nama = "Faisal Taufik";
+        kasus.progress = 1;
+        adapter.kasusList.add(kasus);
+
+        kasus = new Kasus();
+        kasus.nama = "Korupsi Pengadaan Lahan Untuk Asrama Haji Riau";
+        kasus.time = "1 hari";
+        kasus.watch = 411;
+        kasus.aktor.nama = "Muhammad Guntur";
+        kasus.progress = 4;
+        adapter.kasusList.add(kasus);
+
+        kasus = new Kasus();
+        kasus.nama = "Korupsi Pembayaran Honor Tim Pembina";
+        kasus.time = "1 hari";
+        kasus.watch = 912;
+        kasus.aktor.nama = "Junaidi Hamsyah";
+        kasus.progress = 4;
+        adapter.kasusList.add(kasus);
+
+        kasus = new Kasus();
+        kasus.nama = "Suap dari PT Media Karya Sentosa";
+        kasus.time = "1 hari";
+        kasus.watch = 135;
+        kasus.aktor.nama = "JFuad Amin";
+        kasus.progress = 4;
+        adapter.kasusList.add(kasus);
+
         adapter.notifyDataSetChanged();
     }
 }
