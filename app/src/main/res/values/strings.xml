@@ -13,7 +13,7 @@
     <string name="label_aktop_top">Koruptor Terpanas</string>
     <string name="label_trivia">Trivia</string>
 
-    <string name="label_nilai_total">Nilai total:</string>
+    <string name="label_nilai_kasus">Nilai:</string>
     <string name="label_aktor">Aktor:</string>
 
     <array name="aktor_detail_tab_titles">

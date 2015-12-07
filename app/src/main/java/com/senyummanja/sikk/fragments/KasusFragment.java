@@ -37,7 +37,7 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
 
     @Override
     public void onKasusItemClick(Kasus kasus) {
-        KasusDetailActivity_.intent(this).start();
+        KasusDetailActivity_.intent(this).kasus(kasus).start();
     }
 
     private void performGetKasusList() {
@@ -46,6 +46,10 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
         kasus.time = "3 hari";
         kasus.watch = 1452;
         kasus.aktor.nama = "Setya Novanto";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "Ketua DPR RI";
+        kasus.aktor.nilai = "?";
+        kasus.aktor.kasusList.add(kasus);
         kasus.progress = 2;
         adapter.kasusList.add(kasus);
 
@@ -54,6 +58,10 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
         kasus.time = "1 hari";
         kasus.watch = 312;
         kasus.aktor.nama = "Susilo";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "Mantan Kadisbun Riau";
+        kasus.aktor.nilai = "Rp38.000.000.000,00";
+        kasus.aktor.kasusList.add(kasus);
         kasus.progress = 4;
         adapter.kasusList.add(kasus);
 
@@ -62,6 +70,10 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
         kasus.time = "1 hari";
         kasus.watch = 225;
         kasus.aktor.nama = "Mohammad Bihar Sakti Wibowo";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "Mantan Direktur PT Bursa Berjangka Jakarta";
+        kasus.aktor.nilai = "?";
+        kasus.aktor.kasusList.add(kasus);
         kasus.progress = 3;
         adapter.kasusList.add(kasus);
 
@@ -70,6 +82,10 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
         kasus.time = "1 hari";
         kasus.watch = 275;
         kasus.aktor.nama = "Mulyadi Jayabaya";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "Ketua DPR RI";
+        kasus.aktor.nilai = "Rp25.000.000.000,00";
+        kasus.aktor.kasusList.add(kasus);
         kasus.progress = 4;
         adapter.kasusList.add(kasus);
 
@@ -78,6 +94,10 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
         kasus.time = "1 hari";
         kasus.watch = 512;
         kasus.aktor.nama = "Faisal Taufik";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "Mantan Bupati Lebak";
+        kasus.aktor.nilai = "Rp2.000.000.000,00";
+        kasus.aktor.kasusList.add(kasus);
         kasus.progress = 1;
         adapter.kasusList.add(kasus);
 
@@ -86,6 +106,10 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
         kasus.time = "1 hari";
         kasus.watch = 411;
         kasus.aktor.nama = "Muhammad Guntur";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "Mantan Kepala Badan Kepegawaian Daerah";
+        kasus.aktor.nilai = "Rp17.958.525.000,00";
+        kasus.aktor.kasusList.add(kasus);
         kasus.progress = 4;
         adapter.kasusList.add(kasus);
 
@@ -94,6 +118,10 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
         kasus.time = "1 hari";
         kasus.watch = 912;
         kasus.aktor.nama = "Junaidi Hamsyah";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "Gubernur Bengkulu";
+        kasus.aktor.nilai = "Rp5.000.000.000,00";
+        kasus.aktor.kasusList.add(kasus);
         kasus.progress = 4;
         adapter.kasusList.add(kasus);
 
@@ -101,7 +129,11 @@ public class KasusFragment extends Fragment implements OnKasusItemClickListener 
         kasus.nama = "Suap dari PT Media Karya Sentosa";
         kasus.time = "1 hari";
         kasus.watch = 135;
-        kasus.aktor.nama = "JFuad Amin";
+        kasus.aktor.nama = "Fuad Amin";
+        kasus.aktor.foto = "http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg";
+        kasus.aktor.jabatan = "";
+        kasus.aktor.nilai = "Rp18.050.000.000,00";
+        kasus.aktor.kasusList.add(kasus);
         kasus.progress = 4;
         adapter.kasusList.add(kasus);
 

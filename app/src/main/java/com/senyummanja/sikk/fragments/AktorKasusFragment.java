@@ -12,7 +12,10 @@ import com.senyummanja.sikk.views.KasusListItemView_;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EFragment;
+import org.androidannotations.annotations.FragmentArg;
 import org.androidannotations.annotations.ViewById;
+
+import java.util.ArrayList;
 
 /**
  * Created by irvan on 12/5/15.
@@ -20,31 +23,28 @@ import org.androidannotations.annotations.ViewById;
 @EFragment(R.layout.fragment_aktor_kasus)
 public class AktorKasusFragment extends Fragment implements OnKasusItemClickListener {
 
+    private static final String FRAGMENT_ARG_KASUS_LIST = "kasus_list";
+
     @ViewById(R.id.layout)
     protected LinearLayout linearLayout;
 
+    @FragmentArg(FRAGMENT_ARG_KASUS_LIST)
+    protected ArrayList<Kasus> kasusList;
+
     @AfterViews
     protected void initViews() {
-        performGetKasusList();
+        if (kasusList != null) {
+            for (Kasus kasus : kasusList) {
+                KasusListItemView itemView = KasusListItemView_.build(getContext());
+                itemView.setOnKasusItemClickListener(this);
+                itemView.setKasus(kasus);
+                linearLayout.addView(itemView);
+            }
+        }
     }
 
     @Override
     public void onKasusItemClick(Kasus kasus) {
         KasusDetailActivity_.intent(this).start();
-    }
-
-    private void performGetKasusList() {
-        for (int i = 1; i <= 8; i++) {
-            Kasus kasus = new Kasus();
-            kasus.nama = "Kasus Korupsi #" + i;
-            kasus.time = "20";
-            kasus.watch = 200 - (i * 10);
-            kasus.aktor.nama = "Muhammad Jesus";
-
-            KasusListItemView itemView = KasusListItemView_.build(getActivity());
-            itemView.setOnKasusItemClickListener(this);
-            itemView.setKasus(kasus);
-            linearLayout.addView(itemView);
-        }
     }
 }

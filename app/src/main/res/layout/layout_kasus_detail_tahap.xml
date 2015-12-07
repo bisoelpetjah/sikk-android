@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/statusBadge"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_logo"/>
+
+    <TextView
+        android:id="@+id/namaTahap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_toLeftOf="@id/statusBadge"
+        android:text="Tahap 4"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/keterangan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_below="@id/namaTahap"
+        android:layout_toLeftOf="@id/statusBadge"
+        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nibh nulla, eget semper elit ullamcorper sed. Fusce ipsum leo, fringilla sit amet ipsum id, semper aliquet eros."/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/keterangan"
+        android:layout_toLeftOf="@id/statusBadge"
+        android:background="@android:color/darker_gray"/>
+
+</RelativeLayout>

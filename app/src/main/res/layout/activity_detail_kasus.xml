@@ -27,7 +27,6 @@
                     android:layout_marginLeft="10dp"
                     android:layout_marginTop="?attr/actionBarSize"
                     android:layout_marginRight="10dp"
-                    android:text="Kasus Papa Minta Saham"
                     android:textSize="22sp"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
@@ -40,16 +39,15 @@
                     android:layout_marginTop="15dp"
                     android:layout_marginRight="2dp"
                     android:layout_below="@id/namaKasus"
-                    android:text="@string/label_nilai_total"
+                    android:text="@string/label_nilai_kasus"
                     android:textColor="@android:color/white"/>
 
                 <TextView
-                    android:id="@+id/nilaiTotal"
+                    android:id="@+id/nilai"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@id/labelNilai"
                     android:layout_alignBaseline="@id/labelNilai"
-                    android:text="Rp9012345678,00"
                     android:textSize="16sp"
                     android:textColor="@android:color/white"
                     android:textStyle="bold"/>
@@ -76,7 +74,6 @@
                     android:paddingTop="5dp"
                     android:paddingRight="10dp"
                     android:paddingBottom="5dp"
-                    android:text="Setya Novanto"
                     android:textColor="@color/bg_toolbar"
                     android:background="@drawable/bg_chip"/>
 
@@ -104,191 +101,10 @@
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
         <LinearLayout
+            android:id="@+id/tahap"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/statusBadge4"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_logo"/>
-
-                <TextView
-                    android:id="@+id/namaTahap4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toLeftOf="@id/statusBadge4"
-                    android:text="Tahap 4"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/keterangan4"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_below="@id/namaTahap4"
-                    android:layout_toLeftOf="@id/statusBadge4"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nibh nulla, eget semper elit ullamcorper sed. Fusce ipsum leo, fringilla sit amet ipsum id, semper aliquet eros."/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/keterangan4"
-                    android:layout_toLeftOf="@id/statusBadge4"
-                    android:background="@android:color/darker_gray"/>
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/statusBadge3"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_logo"/>
-
-                <TextView
-                    android:id="@+id/namaTahap3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toLeftOf="@id/statusBadge3"
-                    android:text="Tahap 3"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/keterangan3"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_below="@id/namaTahap3"
-                    android:layout_toLeftOf="@id/statusBadge3"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nibh nulla, eget semper elit ullamcorper sed. Fusce ipsum leo, fringilla sit amet ipsum id, semper aliquet eros. Nunc quis nisi ligula."/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/keterangan3"
-                    android:layout_toLeftOf="@id/statusBadge3"
-                    android:background="@android:color/darker_gray"/>
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/statusBadge2"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_logo"/>
-
-                <TextView
-                    android:id="@+id/namaTahap2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toLeftOf="@id/statusBadge2"
-                    android:text="Tahap 2"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/keterangan2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_below="@id/namaTahap2"
-                    android:layout_toLeftOf="@id/statusBadge2"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit."/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/keterangan2"
-                    android:layout_toLeftOf="@id/statusBadge2"
-                    android:background="@android:color/darker_gray"/>
-
-            </RelativeLayout>
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <ImageView
-                    android:id="@+id/statusBadge1"
-                    android:layout_width="64dp"
-                    android:layout_height="64dp"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginRight="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:layout_alignParentRight="true"
-                    android:src="@drawable/ic_logo"/>
-
-                <TextView
-                    android:id="@+id/namaTahap1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_toLeftOf="@id/statusBadge1"
-                    android:text="Tahap 1"
-                    android:textSize="18sp"
-                    android:textStyle="bold"/>
-
-                <TextView
-                    android:id="@+id/keterangan1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginTop="5dp"
-                    android:layout_below="@id/namaTahap1"
-                    android:layout_toLeftOf="@id/statusBadge1"
-                    android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada nibh nulla, eget semper elit ullamcorper sed. Fusce ipsum leo, fringilla sit amet ipsum id, semper aliquet eros. Nunc quis nisi ligula. Curabitur pulvinar sit amet sem euismod aliquam. Aliquam ultrices dui at neque finibus, quis dapibus lectus vulputate. Quisque tincidunt tempus ultricies. Cras id ante ac odio porttitor condimentum tincidunt ac odio."/>
-
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_below="@id/keterangan1"
-                    android:layout_toLeftOf="@id/statusBadge1"
-                    android:background="@android:color/darker_gray"/>
-
-            </RelativeLayout>
-        </LinearLayout>
+            android:orientation="vertical"/>
     </android.support.v4.widget.NestedScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

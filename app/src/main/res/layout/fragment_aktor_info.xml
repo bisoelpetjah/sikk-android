@@ -18,14 +18,6 @@
         android:layout_marginTop="10dp"
         android:layout_marginRight="10dp"
         android:layout_toRightOf="@id/labelJabatan"
-        android:text="Direktur Korupsi"
         android:textStyle="bold"/>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:layout_below="@id/jabatan"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam vestibulum nibh in ligula vestibulum, eget mattis leo venenatis. Cras ac ante pulvinar, malesuada sem vitae, lobortis quam. Vestibulum gravida blandit ligula vel volutpat. Maecenas aliquet turpis non lacinia porta. Morbi mollis, velit vel malesuada imperdiet, orci orci pellentesque mauris, sed sagittis enim leo ac diam. Sed finibus efficitur pretium. Nunc et dui non libero congue convallis. Integer non pharetra felis. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nulla venenatis dignissim semper. Duis bibendum blandit ultricies."/>
 
 </RelativeLayout>

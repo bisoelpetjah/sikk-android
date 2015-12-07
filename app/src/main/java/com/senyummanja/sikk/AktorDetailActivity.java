@@ -7,13 +7,16 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.senyummanja.sikk.fragments.adapters.AktorDetailPagerAdapter;
+import com.senyummanja.sikk.models.Aktor;
 import com.senyummanja.sikk.utils.RoundedDrawable;
 
 import org.androidannotations.annotations.AfterViews;
 import org.androidannotations.annotations.EActivity;
+import org.androidannotations.annotations.Extra;
 import org.androidannotations.annotations.ViewById;
 
 import nevet.me.wcviewpager.WrapContentViewPager;
@@ -23,6 +26,8 @@ import nevet.me.wcviewpager.WrapContentViewPager;
  */
 @EActivity(R.layout.activity_detail_aktor)
 public class AktorDetailActivity extends AppCompatActivity {
+
+    private static final String EXTRA_AKTOR = "aktor";
 
     @ViewById(R.id.collapsingToolbar)
     protected CollapsingToolbarLayout collapsingToolbarLayout;
@@ -36,14 +41,22 @@ public class AktorDetailActivity extends AppCompatActivity {
     @ViewById(R.id.foto)
     protected ImageView imageViewFoto;
 
+    @ViewById(R.id.nama)
+    protected TextView textViewNama;
+
+    @ViewById(R.id.nilai)
+    protected TextView textViewNilai;
+
     @ViewById(R.id.viewPager)
     protected WrapContentViewPager viewPager;
+
+    @Extra(EXTRA_AKTOR)
+    protected Aktor aktor;
 
     @AfterViews
     protected void initViews() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
-        getSupportActionBar().setTitle("Muhammad Jesus");
 
         collapsingToolbarLayout.setExpandedTitleColor(Color.TRANSPARENT);
 
@@ -56,15 +69,22 @@ public class AktorDetailActivity extends AppCompatActivity {
 
         viewPager.setOffscreenPageLimit(3);
 
-        AktorDetailPagerAdapter pagerAdapter = new AktorDetailPagerAdapter(this, getSupportFragmentManager());
+        AktorDetailPagerAdapter pagerAdapter = new AktorDetailPagerAdapter(this, getSupportFragmentManager(), aktor);
         viewPager.setAdapter(pagerAdapter);
 
         tabLayout.setupWithViewPager(viewPager);
 
-        Glide.with(this)
-                .load("http://www.differencebetween.info/sites/default/files/images_articles_d7_1/muhammad.jpg")
-                .asBitmap()
-                .centerCrop()
-                .into(RoundedDrawable.makeRoundedDrawableTarget(imageViewFoto));
+        if (aktor != null) {
+            getSupportActionBar().setTitle(aktor.nama);
+
+            Glide.with(this)
+                    .load(aktor.foto)
+                    .asBitmap()
+                    .centerCrop()
+                    .into(RoundedDrawable.makeRoundedDrawableTarget(imageViewFoto));
+
+            textViewNama.setText(aktor.nama);
+            textViewNilai.setText(aktor.nilai);
+        }
     }
 }
